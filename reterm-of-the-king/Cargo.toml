@@ -4,4 +4,16 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+libc = "0.2"
 nix = "0.17.0"
+signal-hook = "0.3.18"
+
+# GUI + text
+eframe = { version = "0.27", features = ["wgpu"] }
+egui = "0.27"
+
+# Optional, for cleaner cross-thread channels (std mpsc also works)
+crossbeam-channel = "0.5"
+
+# (Soon) for proper ANSI parsing:
+vte = "0.13"
